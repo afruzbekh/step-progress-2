@@ -8,7 +8,7 @@ main {
     align-items: center;
     flex-direction: column;
 }
-ul {
+.newStep-progress {
     width: 1100px;
     display: flex;
     align-items: center;
@@ -18,7 +18,7 @@ ul {
     margin: 0px 0px 50px 0px;
     position: relative;
 }
-ul li {
+.newStep-progress .newStep-progress__circle {
     width: 110px;
     display: flex;
     justify-content: center;
@@ -27,7 +27,7 @@ ul li {
     text-align: center;
     position: relative;
 }
-ul li::after {
+.newStep-progress .newStep-progress__circle::after {
     content: '';
     width: 54px;
     height: 3px;
@@ -36,13 +36,13 @@ ul li::after {
     top: 20%;
     left: 99%;
 }
-ul li.active::after {
-    background: #A5DD9B;
+.newStep-progress .newStep-progress__circle.newStep-progress__active_circle::after {
+    background: #80c573;
 }
-ul li:last-child::after {
+.newStep-progress .newStep-progress__circle:last-child::after {
     content: none;
 }
-ul li span {
+.newStep-progress .newStep-progress__circle span {
     cursor: pointer;
     filter: grayscale(100%);
     width: 80px;
@@ -57,13 +57,13 @@ ul li span {
     font-weight: bold;
     position: relative;
 }
-ul li.active span {
+.newStep-progress .newStep-progress__circle.newStep-progress__active_circle span {
     filter: grayscale(0%);
-    background: #A5DD9B;
-    box-shadow : 0px 0px 15px #A5DD9B;
+    background: #80c573;
+    box-shadow : 0px 0px 15px #80c573;
     color: white;
 }
-ul li span::before {
+.newStep-progress .newStep-progress__circle span::before {
     content: '';
     position: absolute;
     top: 44%;
@@ -74,16 +74,16 @@ ul li span::before {
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
 }
-ul li span svg {
+.newStep-progress .newStep-progress__circle span svg {
   width: 40px;
 }
-ul li.active span::before {
-    border-left-color: #A5DD9B;
+.newStep-progress .newStep-progress__circle.newStep-progress__active_circle span::before {
+    border-left-color: #80c573;
 }
-ul li:last-child span::before {
+.newStep-progress .newStep-progress__circle:last-child span::before {
     content: none;
 }
-ul li p {
+.newStep-progress .newStep-progress__circle p {
     max-width: 100%;
     height: 100px;
     text-align: center;
